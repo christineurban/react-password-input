@@ -1,0 +1,98 @@
+.password {
+  font-family: Verdana, Geneva, sans-serif;
+  width: 300px;
+
+  &__input {
+    height: 35px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    padding-left: 10px;
+    font-size: 20px;
+    outline: none;
+    box-sizing: border-box;
+
+    &-wrapper {
+      position: relative;
+    }
+
+    &-score {
+      position: absolute;
+      right: 10px;
+      top: 6px;
+      color: lightgray;
+    }
+
+    &-bar {
+      height: 2px;
+      width: 0;
+      position: absolute;
+      bottom: 0;
+      transition: width 0.5s ease-in-out;
+
+      &--red {
+        background-color: #ff4d4d;
+        width: 25%;
+      }
+
+      &--yellow {
+        background-color: #FCAD5A;
+        width: 50%;
+      }
+
+      &--blue {
+        background-color: #0e9bff;
+        width: 75%;
+      }
+
+      &--green {
+        background-color: #47C749;
+        width: 100%;
+      }
+    }
+  }
+
+  &__rules {
+    color: gray;
+
+    &-header {
+      font-weight: bold;
+      margin: 5px 0 10px;
+    }
+  }
+
+  &__icon {
+    display: inline;
+    
+    &::before {
+      margin-right: 8px;
+      width: 16px;
+      height: 16px;
+      color: white;
+      display: inline-block;
+      text-align: center;
+      border-radius: 50%;
+      line-height: 16px;
+      vertical-align: middle;
+      font-size: 14px;
+    }
+
+    &--success::before {
+      background-color: #47C749;
+      font-size: 12px;
+      content: "\2713 ";
+    }
+
+    &--error::before {
+      background-color: #ff4d4d;
+      content: "\00d7";
+    }
+  }
+}
+
+
+
+
+
+
+
